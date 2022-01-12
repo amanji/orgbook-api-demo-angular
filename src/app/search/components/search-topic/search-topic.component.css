@@ -1,0 +1,23 @@
+:host {
+  margin-bottom: 0.5rem;
+  width: 100%;
+}
+
+mat-card-content {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+
+.credential-status {
+  margin: 0 16px;
+}
+
+.credential-status > div:first-child {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin-right: 0.25rem;
+  align-items: center;
+}

@@ -1,0 +1,19 @@
+<ob-search-topic-not-found
+  *ngIf="topicResponse?.total === 0"
+></ob-search-topic-not-found>
+<ng-container *ngIf="topicResponse?.results?.length">
+  <div class="list">
+    <ob-search-topic
+      *ngFor="let topic of topicResponse?.results"
+      [topic]="topic"
+    ></ob-search-topic>
+  </div>
+  <div class="nav" *ngIf="topicResponse?.total > topicResponse?.page_size">
+    <ob-search-topic-list-nav
+      [topicResponse]="topicResponse"
+      [loading]="loading"
+      (page)="onPage($event)"
+    >
+    </ob-search-topic-list-nav>
+  </div>
+</ng-container>
